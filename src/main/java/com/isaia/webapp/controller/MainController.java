@@ -18,4 +18,25 @@ public class MainController {
 		return "index";
 	}
 
+	/***
+	 * CARREGA À PÁGINA INICIAL DA APLICAÇÃO APÓS EFETUARMOS O LOGIN 
+	 * @return
+	 */
+	@RequestMapping(value="/home", method= RequestMethod.GET)
+	public String home(){
+ 
+		return "home";
+	}
+ 
+	/***
+	 * MOSTRA UM PÁGINA COM A MENSAGEM DE ACESSO NEGADO QUANDO O 
+	 * USUÁRIO NÃO TIVER PERMISSÃO DE ACESSAR UMA DETERMINADA FUNÇÃO DO SISTEMA
+	 * @return
+	 */
+	@RequestMapping(value="/acessoNegado", method= RequestMethod.GET)
+	public String acessoNegado(){
+ 
+		return "acessoNegado";
+	}
+	
 }
